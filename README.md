@@ -9,7 +9,7 @@
     - React.js use npm (Node Package Modules) to maintain the javascript environment, and npm comes from node.js
 
 ### Create a new react project
-- <span style="color:red">Note: the project is already created for this repo, you don't need to do it for this project!</span>
+- **Note: the project is already created for this repo, you don't need to do it for this project!**
 - Steps are from the [official react website](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 - `$npx create-react-app your-new-app-name`
 - `$cd your-new-app-name`

@@ -1,8 +1,11 @@
-import React from 'react'
-import {Canvas} from 'react-three-fiber'
-import {OrbitControls} from '@react-three/drei'
-import Box from './components/geometries/box'
-import {Plane} from './components/geometries/plane'
+import React from 'react';
+import {Canvas} from 'react-three-fiber';
+import {OrbitControls} from '@react-three/drei';
+import {Plane} from './components/geometries/plane';
+import NEWorld from './components/layout/neWorld';
+import NWWorld from './components/layout/nwWorld';
+import SWWorld from './components/layout/swWorld';
+import SEWorld from './components/layout/seWorld';
 
 function App() {
   return (
@@ -10,10 +13,10 @@ function App() {
           <OrbitControls />
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <Box position={[-2,2,0]}/>
-          <Box position={[2,2,0]}/>
-          <Box position={[-2,2,-2]}/>
-          <Box position={[2,2,-2]}/>
+          <NEWorld />
+          <NWWorld />
+          <SEWorld />
+          <SWWorld />
           <Plane />
       </Canvas>
   );

@@ -15,4 +15,11 @@
 - `$cd your-new-app-name`
 - `$npm start`
 
-## 
+## How to run the project
+- Check out the project from the repo and open the repo folder through VSCode
+- Go to the project folder: `$cd rock-it-3d`
+- Install the packages: `$npm install`
+- Run the project: `$npm start`
+    - If you have setup the default browser, the testing page supposed to be shown up on a new browser page
+
+## How to deploy the website to Vercel

@@ -28,7 +28,7 @@ import {Canvas, useLoader} from "react-three-fiber";
 
 
 
-const NEWorld = () => {
+const SWWorld = () => {
 
 
 
@@ -70,4 +70,4 @@ const NEWorld = () => {
 
 };
 
-export default NEWorld;
+export default SWWorld;

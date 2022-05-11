@@ -3,7 +3,7 @@ Have you ever wanted to create a lego city and showcase it to your friends all o
 
 ## Create a new react project
 ### Prerequisites
-- [Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/) install version v16.15.0 !! (other versions don't work well!!)
 - Check the installed node.js version in cmd window
     - `$npm -v`
 - Why need node.js

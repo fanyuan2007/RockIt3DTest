@@ -9,6 +9,9 @@ import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 import {Canvas, useLoader} from "react-three-fiber";
 import { DataUtils } from "three";
 
+// <Box position={[4,2,4]} color={"orange"}/>
+
+
 const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationArg, colorArg}) => {
 
     console.log('objectFileNameArg', objectFileNameArg);
@@ -17,13 +20,14 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     console.log('rotationArg', rotationArg);
     console.log('colorArg', colorArg);
 
-    const geom = useLoader(STLLoader, "./White_Brick_2_3.stl");
-    // const geom = useLoader(STLLoader, objectFileNameArg);
+    // const geom = useLoader(STLLoader, "./White_Brick_2_3.stl");
+    const geom = useLoader(STLLoader, objectFileNameArg);
     
     const ref = useRef();
     const {camera} = useThree();
 
 
+    
 /*     useEffect(() => {
         camera.lookAt(ref.current.position);
     });

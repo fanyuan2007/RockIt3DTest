@@ -26,23 +26,12 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     const ref = useRef();
     const {camera} = useThree();
 
-
-    
-/*     useEffect(() => {
-        camera.lookAt(ref.current.position);
-    });
- */
-    // load_file_position_xyz_scale__rotate_color
     return (
         <>
             <mesh ref={ref} position={positionArg} scale={scaleArg}>
                 <primitive object={geom} attach="geometry"/>
                 <meshStandardMaterial color={colorArg}/>
             </mesh>
-
-{/*             <ambientLight/>
-            <pointLight position={[10, 10, 10]}/>
- */}            
         </>
     );
    

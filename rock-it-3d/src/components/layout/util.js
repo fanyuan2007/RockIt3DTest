@@ -29,7 +29,7 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     console.log('ref1', ref);
     // console.log('ref.current.position1', ref.current.position);
 
-    useEffect(() => {
+/*     useEffect(() => {
         console.log('ref.current.position', ref.current.position);
 
         const vec1 = new Vector3(0, 1000, 10000);
@@ -37,7 +37,6 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         console.log('camera position before', camera.position);
 
         
-
         // camera.lookAt(ref.current.position);
         // camera.lookAt(vec1);
 
@@ -48,7 +47,7 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         camera.updateProjectionMatrix();
 
         console.log('camera position after', { camera }.camera.position);
-    });
+    }); */
 
     // load_file_position_xyz_scale__rotate_color
     return (

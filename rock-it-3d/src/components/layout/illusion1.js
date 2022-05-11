@@ -24,7 +24,7 @@ import {Canvas, useLoader, Camera} from "react-three-fiber";
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 
-const AVNER = () => {
+const Illusion1 = () => {
     const {camera} = useThree();
     let objectFileName = Brick2x4;
     let objectFileName2 = Brick2x4;
@@ -99,4 +99,4 @@ const AVNER = () => {
 
 };
 
-export default AVNER;
+export default Illusion1;

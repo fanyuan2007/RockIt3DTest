@@ -3,7 +3,7 @@ import {Canvas, useFrame} from 'react-three-fiber';
 import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import NEWorld from './components/layout/neWorld';
 import NWWorld from './components/layout/nwWorld';
-import SWWorld from './components/layout/avner';
+import SWWorld from './components/layout/illusion1';
 import SEWorld from './components/layout/seWorld';
 import Ground from './components/layout/ground';
 import { useEffect, useRef } from "react";

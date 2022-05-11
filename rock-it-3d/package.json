@@ -15,7 +15,9 @@
     "three": "^0.140.1",
     "web-vitals": "^2.1.4"
   },
+  "files": ["*"],
   "scripts": {
+    "prep": "",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

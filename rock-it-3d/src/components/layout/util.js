@@ -48,9 +48,9 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
 
     return (
         <>
-            <mesh ref={ref} position={positionArg} scale={scaleArg}>
+            <mesh ref={ref} position={positionArg} scale={scaleArg} rotation={rotationArg}>
                 <primitive object={geom} attach="geometry"/>
-                <meshStandardMaterial color={colorArg}/>
+                <meshStandardMaterial color={colorArg} />
             </mesh>
         </>
     );

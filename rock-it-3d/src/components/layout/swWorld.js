@@ -34,12 +34,18 @@ const SWWorld = () => {
  */
     let objectFileName = "./assets/stl/300101_white_brick_2_x_4.stl";
     
-    let position = [0, 0, 0];
+    
     let scale = [0.1, 0.1, 0.1];
     let rotation = [0, 0, 0];
     let color = "orange";
   
-    let position2 = [10, 10, 20];
+    let xOffset = 0.9;
+    let yOffset = 1;
+    let zOffset = 0.9;
+    let position = [0, 0, 0];
+    let position2 = [xOffset*1, yOffset*1, zOffset*1];
+    let position3 = [xOffset*2, yOffset*2, zOffset*2];
+    let position4 = [xOffset*3, yOffset*3, zOffset*3];
     
     return (
         <>
@@ -54,6 +60,20 @@ const SWWorld = () => {
     <LoadObjectFromFile 
         objectFileNameArg={objectFileName} 
         positionArg={position2}
+        scaleArg={scale} 
+        rotationArg={rotation}
+        colorArg={color}/>
+
+    <LoadObjectFromFile 
+        objectFileNameArg={objectFileName} 
+        positionArg={position3}
+        scaleArg={scale} 
+        rotationArg={rotation}
+        colorArg={color}/>
+
+    <LoadObjectFromFile 
+        objectFileNameArg={objectFileName} 
+        positionArg={position4}
         scaleArg={scale} 
         rotationArg={rotation}
         colorArg={color}/>

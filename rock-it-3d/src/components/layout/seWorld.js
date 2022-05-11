@@ -68,6 +68,12 @@ const SEWorld = () => {
     let rposition3 = [width, 0, -depth];
     let rposition4 = [width+depth, 0, -depth];
 
+    // let rposition4 = [width+depth, 0, -depth];
+    // let rposition4 = [width+depth, 0, -depth];
+    // let rposition4 = [width+depth, 0, -depth];
+    // let rposition4 = [width+depth, 0, -depth];
+    // let rposition4 = [width+depth, 0, -depth];
+
     return (
         <>
         <LoadObjectFromFile 

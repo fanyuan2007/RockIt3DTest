@@ -1,3 +1,6 @@
+import Brick2x4 from "../../assets/stl/300101_white_brick_2_x_4.stl"
+import Brick2x3 from "../../assets/stl/300201_white_brick_2_x_3.stl"
+
 import React from 'react';
 
 import { useEffect, useRef } from "react";
@@ -14,14 +17,8 @@ import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 const SWWorld = () => {
 
-    let objectFileName = Brick2x6;
-    
-
+    let objectFileName = Brick2x4;
     let objectFileName2 = Brick2x4;
-    let objectFileName3 = Brick2x2;
-    let objectFileName4 = Brick2x3;
-    let objectFileName5 = Brick1x6;
-    let objectFileName6 = Brick2x8;
     let scale_ratio = 0.105
 
     let scale = [scale_ratio, scale_ratio, scale_ratio];
@@ -29,7 +26,8 @@ const SWWorld = () => {
     let rotation = [0, 0, 0];
     let color = "pink";
   
-    let position2 = [0,0,0];
+    let position = [0,0,0];
+    let position2 = [10, 10, 20];
     position2[0] = position[0] + 10;
     let color2 = "red";
     const {camera} = useThree();

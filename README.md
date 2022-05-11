@@ -24,3 +24,13 @@ Have you ever wanted to create a lego city and showcase it to your friends all o
     - If you have setup the default browser, the testing page supposed to be shown up on a new browser page
 
 ## How to deploy the website to Vercel
+- Sign up on [Vercel's website](https://vercel.com/) (It's free!) with your email
+- Install the Vercel CLI
+    - Navigate to the react project directory (e.g.: `$cd rock-it-3d`)
+    - Intall vercel: `$npm install -g vercel`
+- Login to Vercel: `$vercel login`
+    - Enter the email address you registered to Vercel's website when Vercel asks on VSCode terminal cmd
+    - You will receive an verification email from Vercel, login to the email (e.g. Gmail) and click on the verify button in the email
+- Run Vercel to deploy: `$vercel`
+    - Keep hitting ENTER for all questions with using default answer
+- The deployed website url for sharing will be listed besides *Production:* line

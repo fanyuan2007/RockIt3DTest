@@ -14,14 +14,20 @@ import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 const SWWorld = () => {
 
-/*     let objectFileName = "./White_Brick_2_3.stl";
- */
-    let objectFileName = "./assets/stl/300101_white_brick_2_x_4.stl";
+    let objectFileName = Brick2x6;
     
-    let position = [0, 0, 0];
-    let scale = [0.1, 0.1, 0.1];
+
+    let objectFileName2 = Brick2x4;
+    let objectFileName3 = Brick2x2;
+    let objectFileName4 = Brick2x3;
+    let objectFileName5 = Brick1x6;
+    let objectFileName6 = Brick2x8;
+    let scale_ratio = 0.105
+
+    let scale = [scale_ratio, scale_ratio, scale_ratio];
+
     let rotation = [0, 0, 0];
-    let color = "orange";
+    let color = "pink";
   
     let position2 = [0,0,0];
     position2[0] = position[0] + 10;
@@ -46,12 +52,12 @@ const SWWorld = () => {
         colorArg={color}/>
         
     <LoadObjectFromFile 
-        objectFileNameArg={objectFileName} 
+        objectFileNameArg={objectFileName2} 
         positionArg={position2}
         scaleArg={scale} 
         rotationArg={rotation}
         colorArg={color2}/>
-        
+    
     </>
     );
 

@@ -1,28 +1,12 @@
-// import React from "react";
-// import Box from '../geometries/box';
-// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
-
-// const SWWorld = () => {
-//     return (
-//         <>
-//             <Box position={[-2,2,4]} color={"pink"}/>
-//             <Box position={[-4,2,4]} color={"pink"}/>
-//             <Box position={[-2,4,4]} color={"cyan"}/>
-//             <Box position={[-4,4,4]} color={"cyan"}/>
-//         </>
-//     );
-// }
-
-// export default SWWorld;
 import React from 'react';
 
 import { useEffect, useRef } from "react";
 
-import { useThree } from '@react-three/fiber'
+import { useThree, useFrame } from '@react-three/fiber'
 
 import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 
-import {Canvas, useLoader} from "react-three-fiber";
+import {Canvas, useLoader, Camera} from "react-three-fiber";
 
 //import book from './book.stl'
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
@@ -39,7 +23,17 @@ const SWWorld = () => {
     let rotation = [0, 0, 0];
     let color = "orange";
   
-    let position2 = [10, 10, 20];
+    let position2 = [0,0,0];
+    position2[0] = position[0] + 10;
+    let color2 = "red";
+    const {camera} = useThree();
+
+    useFrame(() => {
+        
+        console.log('camera', camera);
+        console.log('camera.position', camera.position);
+        console.log('camera.rotation', camera.rotation);
+    });
     
     return (
         <>
@@ -56,7 +50,7 @@ const SWWorld = () => {
         positionArg={position2}
         scaleArg={scale} 
         rotationArg={rotation}
-        colorArg={color}/>
+        colorArg={color2}/>
         
     </>
     );

@@ -20,6 +20,7 @@ function App() {
           <NWWorld />
           <SEWorld />
           <SWWorld />
+          <AVNER />
           <Ground />
       </Canvas>
   );

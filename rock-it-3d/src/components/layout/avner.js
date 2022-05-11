@@ -15,7 +15,7 @@ import {Canvas, useLoader, Camera} from "react-three-fiber";
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 
-const SWWorld = () => {
+const AVNER = () => {
 
     let objectFileName = Brick2x4;
     let objectFileName2 = Brick2x4;
@@ -61,4 +61,4 @@ const SWWorld = () => {
 
 };
 
-export default SWWorld;
+export default AVNER;

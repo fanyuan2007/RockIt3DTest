@@ -26,9 +26,6 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     const ref = useRef();
     const {camera} = useThree();
 
-    console.log('ref1', ref);
-    // console.log('ref.current.position1', ref.current.position);
-
 /*     useEffect(() => {
         console.log('ref.current.position', ref.current.position);
 
@@ -49,17 +46,12 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         console.log('camera position after', { camera }.camera.position);
     }); */
 
-    // load_file_position_xyz_scale__rotate_color
     return (
         <>
             <mesh ref={ref} position={positionArg} scale={scaleArg}>
                 <primitive object={geom} attach="geometry"/>
                 <meshStandardMaterial color={colorArg}/>
             </mesh>
-
-{/*             <ambientLight/>
-            <pointLight position={[10, 10, 10]}/>
- */}            
         </>
     );
    
@@ -71,4 +63,3 @@ const LoadObjectFromFile2 = () => {
 
 
 export {LoadObjectFromFile, LoadObjectFromFile2};
-// export default LoadObjectFromFile;

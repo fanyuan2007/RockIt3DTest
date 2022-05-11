@@ -1,3 +1,6 @@
+// import React from "react";
+// import Box from '../geometries/box';
+// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import Brick2x4 from "../../assets/stl/300101_white_brick_2_x_4.stl"
 import Brick2x3 from "../../assets/stl/300201_white_brick_2_x_3.stl"
 import Brick2x2 from "../../assets/stl/300301_white_brick_2_x_2.stl"
@@ -10,26 +13,29 @@ import Brick1x4 from "../../assets/stl/301001_white_brick_1_x_4.stl"
 import Brick1x3 from "../../assets/stl/362201_white_brick_1_x_3.stl"
 import Brick2x6 from "../../assets/stl/4181142_-_2456_-_44237_white_brick_2_x_6.stl"
 
+// export default SWWorld;
 import React from 'react';
 
 import { useEffect, useRef } from "react";
 
-import { useThree, useFrame } from '@react-three/fiber'
+import { useThree } from '@react-three/fiber'
 
 import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 
-import {Canvas, useLoader, Camera} from "react-three-fiber";
+import {Canvas, useLoader} from "react-three-fiber";
 
 //import book from './book.stl'
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 
-const AVNER = () => {
-    const {camera} = useThree();
-    let objectFileName = Brick2x4;
+const SWWorld = () => {
+
+    let objectFileName = Brick2x6;
+    
+
     let objectFileName2 = Brick2x4;
-    let objectFileName3 = Brick2x4;
-    let objectFileName4 = Brick2x4;
+    let objectFileName3 = Brick2x2;
+    let objectFileName4 = Brick2x3;
     let objectFileName5 = Brick1x6;
     let objectFileName6 = Brick2x8;
     let scale_ratio = 0.105
@@ -37,7 +43,7 @@ const AVNER = () => {
     let scale = [scale_ratio, scale_ratio, scale_ratio];
 
     let rotation = [0, 0, 0];
-    let color = "red";
+    let color = "pink";
   
     let xOffset = 0.9;
     let yOffset = 1;
@@ -52,13 +58,6 @@ const AVNER = () => {
     let position6 = [0, 5, 0];
     let position5 = [0, 6, 0];
     
-    useFrame(() => {
-        
-        console.log('camera', camera);
-        console.log('camera.position', camera.position);
-        console.log('camera.rotation', camera.rotation);
-    });
-    
     return (
         <>
 
@@ -70,7 +69,7 @@ const AVNER = () => {
         colorArg={color}/>
         
     <LoadObjectFromFile 
-        objectFileNameArg={objectFileName} 
+        objectFileNameArg={objectFileName2} 
         positionArg={position2}
         scaleArg={scale} 
         rotationArg={rotation}
@@ -92,11 +91,23 @@ const AVNER = () => {
         rotationArg={rotation}
         colorArg={color}/>
         
+    <LoadObjectFromFile 
+        objectFileNameArg={objectFileName5} 
+        positionArg={position5}
+        scaleArg={scale} 
+        rotationArg={rotation}
+        colorArg={color}/>
         
+    <LoadObjectFromFile 
+        objectFileNameArg={objectFileName6} 
+        positionArg={position6}
+        scaleArg={scale} 
+        rotationArg={rotation}
+    colorArg={color}/>
     
     </>
     );
 
 };
 
-export default AVNER;
+export default SWWorld;

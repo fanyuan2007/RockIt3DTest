@@ -3,7 +3,7 @@ import {Canvas, useFrame} from 'react-three-fiber';
 import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import Box from './components/geometries/box';
 import NEWorld from './components/layout/neWorld';
-import NWWorld from './components/layout/nwWorld';
+import ObjMeshTester from './components/layout/objMeshTester';
 import SWWorld from './components/layout/illusion1';
 import SEWorld from './components/layout/seWorld';
 import Ground from './components/layout/ground';
@@ -48,7 +48,7 @@ avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.261259296337
           <Box position={mesh1Pos} color={"red"}/>
           <Box position={mesh2Pos} color={"yellow"}/>
           <NEWorld />
-          <NWWorld />
+          <ObjMeshTester />
           <SEWorld />
           <SWWorld />
 

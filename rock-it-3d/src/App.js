@@ -4,9 +4,8 @@ import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import Box from './components/geometries/box';
 import NEWorld from './components/layout/neWorld';
 import NWWorld from './components/layout/nwWorld';
+import SWWorld from './components/layout/illusion1';
 import SEWorld from './components/layout/seWorld';
-import SWWorld from './components/layout/swWorld';
-import AVNER from './components/layout/avner';
 import Ground from './components/layout/ground';
 import DisplayForm from './components/layout/displayForm';
 
@@ -21,7 +20,7 @@ function App() {
   const onMeshPositionUpdate = (updatedMeshInfo) => {
     //console.log("values: ", updatedMeshInfo);
     setMeshInfo(updatedMeshInfo);
-    console.log("mesh information: ", meshInfo);
+    //console.log("mesh information: ", meshInfo);
     if (meshInfo.mId == 0)
     {
       setMesh1Pos([meshInfo.xPos, meshInfo.yPos, meshInfo.zPos]);
@@ -39,7 +38,10 @@ function App() {
       </div>
       <Canvas style={{position: "absolute"}} >
           <OrbitControls />
-          <PerspectiveCamera makeDefault position={[42.97, 39.16, -12.28]} rotation={[1.874, 0.808, 1.980]} />
+          <PerspectiveCamera makeDefault position={[-6.25, 11.73, -4.58]} rotation={[-2.14, -0.59, -2.42]} />
+          {/* illusion 2:
+          camera.position Vector3 {x: 16.80139210958912, y: 13.76807931426504, z: 26.619405072875377}
+avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
           <Box position={mesh1Pos} color={"red"}/>
@@ -48,8 +50,8 @@ function App() {
           <NWWorld />
           <SEWorld />
           <SWWorld />
-          <AVNER />
-          <Ground />
+
+          {/* <Ground /> */}
       </Canvas>
     </>
   );

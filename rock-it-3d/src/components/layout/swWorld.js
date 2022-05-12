@@ -60,49 +60,49 @@ const SWWorld = () => {
     return (
         <>
 
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName} 
-        positionArg={position}
-        scaleArg={scale} 
-        rotationArg={rotation}
-        colorArg={color}/>
-        
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName2} 
-        positionArg={position2}
-        scaleArg={scale} 
-        rotationArg={rotation}
-        colorArg={color}/>
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName} 
+            positionArg={position}
+            scaleArg={scale} 
+            rotationArg={rotation}
+            colorArg={color}/>
+            
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName2} 
+            positionArg={position2}
+            scaleArg={scale} 
+            rotationArg={rotation}
+            colorArg={color}/>
 
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName} 
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName} 
 
-        positionArg={position3}
-        scaleArg={scale} 
-        rotationArg={rotation}
-        colorArg={color}/>
+            positionArg={position3}
+            scaleArg={scale} 
+            rotationArg={rotation}
+            colorArg={color}/>
 
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName} 
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName} 
 
-        positionArg={position4}
-        scaleArg={scale} 
-        rotationArg={rotation}
+            positionArg={position4}
+            scaleArg={scale} 
+            rotationArg={rotation}
+            colorArg={color}/>
+            
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName5} 
+            positionArg={position5}
+            scaleArg={scale} 
+            rotationArg={rotation}
+            colorArg={color}/>
+            
+        <LoadObjectFromFile 
+            objectFileNameArg={objectFileName6} 
+            positionArg={position6}
+            scaleArg={scale} 
+            rotationArg={rotation}
         colorArg={color}/>
-        
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName5} 
-        positionArg={position5}
-        scaleArg={scale} 
-        rotationArg={rotation}
-        colorArg={color}/>
-        
-    <LoadObjectFromFile 
-        objectFileNameArg={objectFileName6} 
-        positionArg={position6}
-        scaleArg={scale} 
-        rotationArg={rotation}
-    colorArg={color}/>
     
     </>
     );

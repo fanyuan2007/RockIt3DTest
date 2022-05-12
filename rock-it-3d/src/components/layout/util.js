@@ -26,7 +26,7 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     const ref = useRef();
     const {camera} = useThree();
 
-    useEffect(() => {
+/*     useEffect(() => {
         console.log('ref.current.position', ref.current.position);
 
         const vec1 = new Vector3(0, 1000, 10000);
@@ -34,7 +34,6 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         //console.log('camera position before', camera.position);
 
         
-
         // camera.lookAt(ref.current.position);
         // camera.lookAt(vec1);
 
@@ -44,14 +43,14 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         // camera.rotateY(60);
         camera.updateProjectionMatrix();
 
-        //console.log('camera position after', { camera }.camera.position);
-    });
+        console.log('camera position after', { camera }.camera.position);
+    }); */
 
     return (
         <>
-            <mesh ref={ref} position={positionArg} scale={scaleArg}>
+            <mesh ref={ref} position={positionArg} scale={scaleArg} rotation={rotationArg}>
                 <primitive object={geom} attach="geometry"/>
-                <meshStandardMaterial color={colorArg}/>
+                <meshStandardMaterial color={colorArg} />
             </mesh>
         </>
     );

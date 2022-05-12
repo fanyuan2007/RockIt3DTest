@@ -21,13 +21,14 @@ function App() {
     //console.log("values: ", updatedMeshInfo);
     setMeshInfo(updatedMeshInfo);
     //console.log("mesh information: ", meshInfo);
+    var newMesh = [meshInfo.xPos, meshInfo.yPos, meshInfo.zPos];
     if (meshInfo.mId == 0)
     {
-      setMesh1Pos([meshInfo.xPos, meshInfo.yPos, meshInfo.zPos]);
+      setMesh1Pos([...newMesh]);
     }
     else
     {
-      setMesh2Pos([meshInfo.xPos, meshInfo.yPos, meshInfo.zPos]);
+      setMesh2Pos([...newMesh]);
     }
   };
 

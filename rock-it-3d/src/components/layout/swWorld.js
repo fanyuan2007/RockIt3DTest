@@ -24,7 +24,6 @@ import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 
 import {Canvas, useLoader} from "react-three-fiber";
 
-//import book from './book.stl'
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 

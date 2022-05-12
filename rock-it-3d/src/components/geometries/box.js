@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 export default function Box({position, color, size}) {
     var boxSize = size || [1,1,1];
     return (

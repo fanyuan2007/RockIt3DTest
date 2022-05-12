@@ -34,9 +34,9 @@ const AVNER = () => {
 
     useFrame(() => {
         
-        console.log('camera', camera);
-        console.log('camera.position', camera.position);
-        console.log('camera.rotation', camera.rotation);
+        //console.log('camera', camera);
+        //console.log('camera.position', camera.position);
+        //console.log('camera.rotation', camera.rotation);
     });
     
     return (

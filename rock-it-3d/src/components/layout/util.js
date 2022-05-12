@@ -30,8 +30,8 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         console.log('ref.current.position', ref.current.position);
 
         const vec1 = new Vector3(0, 1000, 10000);
-        console.log('camera before', { camera });
-        console.log('camera position before', camera.position);
+        //console.log('camera before', { camera });
+        //console.log('camera position before', camera.position);
 
         
 
@@ -44,7 +44,7 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         // camera.rotateY(60);
         camera.updateProjectionMatrix();
 
-        console.log('camera position after', { camera }.camera.position);
+        //console.log('camera position after', { camera }.camera.position);
     });
 
     return (

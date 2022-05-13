@@ -1,6 +1,4 @@
 import React from 'react';
-import Sphere from '../geometries/sphere';
-import {Plane} from '../geometries/plane';
 import Box from '../geometries/box';
 import BoxStack from './boxStack';
 

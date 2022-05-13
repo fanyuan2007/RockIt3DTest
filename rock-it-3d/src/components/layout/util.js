@@ -26,6 +26,7 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     
     const ref = useRef();
     const {camera} = useThree();
+    const curScale = scaleArg || [1,1,1];
 
 /*     useEffect(() => {
         console.log('ref.current.position', ref.current.position);

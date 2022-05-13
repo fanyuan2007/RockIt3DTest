@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const MeshOptions = [
-    "mesh1",
+    "kitty",
     "mesh2"
 ];
 
@@ -10,8 +10,6 @@ const DisplayForm = (props) => {
     const [xPosition, setXPosition] = useState(0);
     const [yPosition, setYPosition] = useState(0);
     const [zPosition, setZPosition] = useState(0);
-
-    const meshOptionValues = [...MeshOptions];
 
     const onClickHandler = (event) => {
         event.preventDefault();
@@ -43,7 +41,7 @@ const DisplayForm = (props) => {
                 <select 
                     style={{width:140, height:20}} 
                     onChange={onMeshSelectionChangeHandler}>
-                    <option>mesh1</option>
+                    <option>kitty</option>
                     <option>mesh2</option>
                 </select>
             </div>
@@ -62,6 +60,6 @@ const DisplayForm = (props) => {
             <button style={{width: 80, height: 20}} onClick={onClickHandler}>Submit</button>
         </form>
     );
-}
+};
 
 export default DisplayForm;

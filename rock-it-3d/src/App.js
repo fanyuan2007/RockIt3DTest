@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {Canvas, useFrame} from 'react-three-fiber';
 import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import Box from './components/geometries/box';
-import NEWorld from './components/layout/neWorld';
 import ObjMeshTester from './components/layout/objMeshTester';
 import SWWorld from './components/layout/illusion1';
 import SEWorld from './components/layout/seWorld';
 import Ground from './components/layout/ground';
 import DisplayForm from './components/layout/displayForm';
+import KittyClimbing from './components/layout/kittyClimbing';
 
 function App() {
   const defaultPos1 = [0,0,0];
@@ -45,10 +45,9 @@ function App() {
 avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <Box position={mesh1Pos} color={"red"}/>
           <Box position={mesh2Pos} color={"yellow"}/>
-          <NEWorld />
           <ObjMeshTester />
+          <KittyClimbing position={mesh1Pos}/>
           <SEWorld />
           <SWWorld />
           <Ground />

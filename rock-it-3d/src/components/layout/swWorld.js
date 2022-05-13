@@ -31,7 +31,6 @@ const SWWorld = () => {
 
     let objectFileName = Brick2x6;
     
-
     let objectFileName2 = Brick2x4;
     let objectFileName3 = Brick2x2;
     let objectFileName4 = Brick2x3;

@@ -20,7 +20,7 @@ const NEWorld = () => {
     let rotation = [0, 0, 0];
     let color = "pink";
   
-    let scale_k = [1, 1, 1]
+    let scale_k = [1, 1, 1];
     let position_k = [-2,2,1];
     
     return (

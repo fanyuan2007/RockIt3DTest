@@ -15,14 +15,13 @@ import { DataUtils, Vector3, Mesh } from "three";
 
 
 const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationArg, colorArg}) => {
-
+/*
     console.log('objectFileNameArg', objectFileNameArg);
     console.log('positionArg', positionArg);
     console.log('scaleArg', scaleArg);
     console.log('rotationArg', rotationArg);
     console.log('colorArg', colorArg);
-
-    // const geom = useLoader(STLLoader, "./White_Brick_2_3.stl");
+*/
     const geom = useLoader(STLLoader, objectFileNameArg);
     
     const ref = useRef();

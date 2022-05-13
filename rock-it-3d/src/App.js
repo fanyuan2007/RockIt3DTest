@@ -51,8 +51,7 @@ avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.261259296337
           <ObjMeshTester />
           <SEWorld />
           <SWWorld />
-
-          {/* <Ground /> */}
+          <Ground />
       </Canvas>
     </>
   );

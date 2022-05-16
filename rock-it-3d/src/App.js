@@ -14,7 +14,7 @@ import Banner from './components/layout/banner';
 import FunctionalButtonGroup from './components/layout/functionalButtonGroup';
 
 function App() {
-  const textDisplay = "Rock It 3D!\nDi Xu\nVincent Siu\nAvner\nDouglas Chong\nHan Zheng";
+  const textDisplay = "Rock It 3D!\n   Di Xu\n   Vincent Siu\n   Avner Moshkovitz\n   Douglas Chong\n   Han Zheng";
   const defaultPos1 = [0,0,0];
   const defaultPos2 = [20,20,20];
 

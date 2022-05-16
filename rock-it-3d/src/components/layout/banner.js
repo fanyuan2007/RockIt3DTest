@@ -4,7 +4,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <img src={"./assets/image/teledyne flir icon.png"} />
+            <img src={"./assets/image/rockit3d.gif"} />
         </div>
     )
 };

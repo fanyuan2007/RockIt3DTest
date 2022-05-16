@@ -57,7 +57,7 @@ const DisplayForm = (props) => {
                 <label>Position Z:</label>
                 <input style={{width: 80}} value={zPosition} onChange={onZPositionChangeHandler}></input>
             </div>
-            <button style={{width: 80, height: 20}} onClick={onClickHandler}>Update</button>
+            <button style={{width: 80, height: 20}} onClick={onClickHandler}>Move</button>
         </form>
     );
 };

@@ -27,10 +27,9 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     const ref = useRef();
     const {camera} = useThree();
     const curScale = scaleArg || [1,1,1];
-
-/*     useEffect(() => {
-        console.log('ref.current.position', ref.current.position);
-
+    
+     useEffect(() => {
+        //console.log('ref.current.position', ref.current.position);
         const vec1 = new Vector3(0, 1000, 10000);
         //console.log('camera before', { camera });
         //console.log('camera position before', camera.position);
@@ -39,14 +38,14 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
         // camera.lookAt(ref.current.position);
         // camera.lookAt(vec1);
 
-        camera.translateX(50);
+        //camera.translateX(50);
 
 
         // camera.rotateY(60);
-        camera.updateProjectionMatrix();
+        //camera.updateProjectionMatrix();
 
-        console.log('camera position after', { camera }.camera.position);
-    }); */
+        //console.log('camera position after', { camera }.camera.position);
+    }); 
 
     return (
         <>
@@ -56,7 +55,6 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
             </mesh>
         </>
     );
-   
 };
 
 const LoadObjectFromFile2 = () => {

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Canvas, useFrame} from 'react-three-fiber';
+import {Canvas, useFrame, useThree} from 'react-three-fiber';
 import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
+import * as THREE from 'three';
 import Box from './components/geometries/box';
 import ObjMeshTester from './components/layout/objMeshTester';
 import SWWorld from './components/layout/illusion1';
@@ -13,6 +14,19 @@ import IllusionStairs from './components/layout/illusionStairs';
 import Banner from './components/layout/banner';
 import FunctionalButtonGroup from './components/layout/functionalButtonGroup';
 
+const CameraUpdate = ({cameraPos, lookAtPos}) => {
+  useFrame((state) => {
+    state.camera.position.x = cameraPos[0];
+    state.camera.position.y = cameraPos[1];
+    state.camera.position.z = cameraPos[2];
+    state.camera.lookAt(lookAtPos[0], lookAtPos[1], lookAtPos[2]);
+    console.log("current camera: ", state.camera);
+    state.camera.updateProjectionMatrix();
+  })
+
+  return null;
+}
+
 function App() {
   const textDisplay = "Rock It 3D!\n   Di Xu\n   Vincent Siu\n   Avner Moshkovitz\n   Douglas Chong\n   Han Zheng";
   const defaultPos1 = [-22,3,-19];
@@ -23,7 +37,6 @@ function App() {
   const [mesh2Pos, setMesh2Pos] = useState(defaultPos2);
 
   const [camPos, setCamPos] = useState([-6.25, 11.73, -4.58]);
-  const [camRot, setCamRot] = useState([-2.14, -0.59, -2.42]);
 
   const onMeshPositionUpdate = (updatedMeshInfo) => {
     //console.log("values: ", updatedMeshInfo);
@@ -44,12 +57,10 @@ function App() {
     if (camUpdateInfo.camId == 0)
     {
       setCamPos([16.8, 13.8, 26.6]);
-      setCamRot([-0.6, -0.3, -0.2]);
     }
     else
     {
       setCamPos([-6.25, 11.73, -4.58]);
-      setCamRot([-2.14, -0.59, -2.42]);
     }
   };
 
@@ -64,9 +75,9 @@ function App() {
       <div>
         <FunctionalButtonGroup updateCameraPos={onCameraPositionUpdateHandler}/>
       </div>
-      <Canvas style={{position: "absolute"}} >
+      <Canvas style={{position: "absolute"}} camera={{ position: [0, 0, 30]}}>
           <OrbitControls />
-          <PerspectiveCamera makeDefault position={camPos} rotation={camRot} />
+          {/*<PerspectiveCamera manual onUpdate={onPerspectiveCameraUpdateHandler} />*/}
           {/* illusion 2:
           camera.position Vector3 {x: 16.80139210958912, y: 13.76807931426504, z: 26.619405072875377}
 avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
@@ -75,6 +86,7 @@ avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.261259296337
           <KittyClimbing position={mesh1Pos}/>
           <ObjMeshTester position={mesh2Pos}/>
           <TextGeom position={[10,30,25]} text={textDisplay} size={3} height={5}/>
+          <CameraUpdate cameraPos={camPos} lookAtPos={mesh1Pos}/>
           <SEWorld />
           <SWWorld />
           <Ground />

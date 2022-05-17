@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
 const MeshOptions = [
-    "kitty",
-    "mesh2"
+    "Kitty",
+    "Car"
 ];
 
 const DisplayForm = (props) => {
@@ -41,8 +41,8 @@ const DisplayForm = (props) => {
                 <select 
                     style={{width:140, height:20}} 
                     onChange={onMeshSelectionChangeHandler}>
-                    <option>kitty</option>
-                    <option>mesh2</option>
+                    <option>Kitty</option>
+                    <option>Car</option>
                 </select>
             </div>
             <div>

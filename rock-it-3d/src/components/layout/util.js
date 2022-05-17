@@ -7,6 +7,7 @@ import {useTexture} from '@react-three/drei';
 
 import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 import {OBJLoader} from "three/examples/jsm/loaders/OBJLoader";
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 
 import {Canvas, useLoader} from "react-three-fiber";
 import { DataUtils, Vector3, Mesh } from "three";
@@ -61,23 +62,17 @@ const LoadObjectFromFile2 = () => {
 
 };
 
-const ObjMeshLoadWrapper = ({meshFilename, textureFilename, position, scale}) => {
-    const obj = useLoader(OBJLoader, meshFilename);
-    const texture = useTexture(textureFilename);
-    const geometry = useMemo(() => {
-        let g;
-        obj.traverse((c) => {
-        if (c.type === "Mesh") {
-            const _c = (c);
-            g = _c.geometry;
-        }
+const ObjMeshLoadWrapper = ({meshFilename, textureFilename, position, rotation, scale}) => {
+    const materials = useLoader(MTLLoader, textureFilename);
+    const obj = useLoader(OBJLoader, meshFilename, loader => {
+        materials.preload();
+        loader.setMaterials(materials)
     });
-    return g;
-  }, [obj]);
-
   return (
-    <mesh geometry={geometry} scale={scale} position={position}>
-      <meshPhysicalMaterial map={texture} color={"red"}/>
+    <mesh scale={scale} position={position} rotation={rotation}>
+        <primitive object={obj} />
+        <meshPhysicalMaterial 
+            color={"red"}/>
     </mesh>
   );
 };

@@ -15,8 +15,8 @@ import FunctionalButtonGroup from './components/layout/functionalButtonGroup';
 
 function App() {
   const textDisplay = "Rock It 3D!\n   Di Xu\n   Vincent Siu\n   Avner Moshkovitz\n   Douglas Chong\n   Han Zheng";
-  const defaultPos1 = [0,0,0];
-  const defaultPos2 = [20,20,20];
+  const defaultPos1 = [-22,3,-19];
+  const defaultPos2 = [-20,10,40];
 
   const [meshInfo, setMeshInfo] = useState({mId:0, xPos:0, yPos:0, zPos:0});
   const [mesh1Pos, setMesh1Pos] = useState(defaultPos1);
@@ -72,10 +72,9 @@ function App() {
 avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <Box position={mesh2Pos} color={"yellow"}/>
-          <ObjMeshTester />
           <KittyClimbing position={mesh1Pos}/>
-          <TextGeom position={[10,10,10]} text={textDisplay} size={3} height={5}/>
+          <ObjMeshTester position={mesh2Pos}/>
+          <TextGeom position={[10,30,25]} text={textDisplay} size={3} height={5}/>
           <SEWorld />
           <SWWorld />
           <Ground />

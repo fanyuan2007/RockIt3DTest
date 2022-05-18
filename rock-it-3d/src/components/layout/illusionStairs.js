@@ -5,7 +5,7 @@ const IllusionStairs = ({groupPosition}) => {
     const color1 = "red";
     const color2 = "green";
     const color3 = "yellow";
-    const color4 = "pink";
+    const color4 = "cyan";
     return (
         <>
             <LegoStack

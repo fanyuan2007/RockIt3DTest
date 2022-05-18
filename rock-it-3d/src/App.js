@@ -31,7 +31,7 @@ const CameraUpdate = ({cameraPos, lookAtPos}) => {
       isUpdate = false;
     }
     //console.log("camera other: ", state.camera);
-    state.camera.lookAt(lookAtPos[0], lookAtPos[1], lookAtPos[2]);
+    // state.camera.lookAt(lookAtPos[0], lookAtPos[1], lookAtPos[2]);
   })
 
   return null;
@@ -90,7 +90,7 @@ function App() {
         </div>
       </div>
       <Canvas style={{position: "absolute"}} camera={{ position: [0, 0, 30]}}>
-          <OrbitControls />
+          <OrbitControls enableDamping={false}/>
           <CameraUpdate cameraPos={camPos} lookAtPos={mesh1Pos}/>
           {/*<PerspectiveCamera manual onUpdate={onPerspectiveCameraUpdateHandler} />*/}
           {/* illusion 2:

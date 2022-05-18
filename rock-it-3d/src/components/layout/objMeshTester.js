@@ -6,7 +6,7 @@ import G70Texture from '../../assets/obj/G70_modified_obj.mtl';
 const ObjMeshTester = ({position}) => {
     return (
         <>
-            <ObjMeshLoadWrapper 
+            <ObjMeshLoadWrapper
                 meshFilename={G70Mesh}
                 textureFilename={G70Texture}
                 position={position}

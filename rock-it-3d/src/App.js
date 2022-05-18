@@ -13,6 +13,7 @@ import TextGeom from './components/geometries/textGeom';
 import IllusionStairs from './components/layout/illusionStairs';
 import Banner from './components/layout/banner';
 import FunctionalButtonGroup from './components/layout/functionalButtonGroup';
+import styles from './components/layout/layout.module.css';
 
 var isUpdate = false;
 
@@ -80,11 +81,13 @@ function App() {
       <div>
         <Banner />
       </div>
-      <div style={{border: "solid", width: "150"}}>
-        <DisplayForm updatePosition={onMeshPositionUpdate}/>
-      </div>
-      <div>
-        <FunctionalButtonGroup updateCameraPos={onCameraPositionUpdateHandler}/>
+      <div className={styles.group}>
+        <div className={styles.form_wrapper}>
+          <DisplayForm updatePosition={onMeshPositionUpdate}/>
+        </div>
+        <div className={styles.event_wrapper}>
+          <FunctionalButtonGroup updateCameraPos={onCameraPositionUpdateHandler}/>
+        </div>
       </div>
       <Canvas style={{position: "absolute"}} camera={{ position: [0, 0, 30]}}>
           <OrbitControls />

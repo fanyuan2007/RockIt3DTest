@@ -1,10 +1,10 @@
 import React from 'react';
-//import TeledyneFlirIcon from '../../assets/image/teledyne flir icon.png'
+import styles from './layout.module.css';
 
 const Banner = () => {
     return (
-        <div>
-            <img src={"./assets/image/rockit3d.gif"} />
+        <div className={styles.banner}>
+            <img alt={"banner"} src={"./assets/image/rockit3d.gif"} />
         </div>
     )
 };

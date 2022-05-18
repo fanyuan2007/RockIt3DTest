@@ -1,0 +1,64 @@
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: solid 1px;
+}
+
+.form_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 380px;
+}
+
+.form_control_left {
+    float: left;
+}
+
+.form_control_right {
+    width: 280px;
+}
+
+.form_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 290px;
+    width: 100px;
+    height: 25px;
+    background-color: skyblue;
+}
+
+.event_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: solid 1px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.event_button {
+    justify-content: center;
+    width: 220px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: skyblue;
+}

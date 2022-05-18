@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from './layout.module.css';
 
 const MeshOptions = [
     "Kitty",
@@ -35,29 +36,28 @@ const DisplayForm = (props) => {
     };
 
     return (
-        <form >
-            <div>
-                <label>Select Mesh:</label>
-                <select 
-                    style={{width:140, height:20}} 
+        <form>
+            <div className={styles.form_item}>
+                <label className={styles.form_control_left}>Select Mesh:</label>
+                <select className={styles.form_control_right}
                     onChange={onMeshSelectionChangeHandler}>
                     <option>Kitty</option>
                     <option>Car</option>
                 </select>
             </div>
-            <div>
-                <label>Position X:</label>
-                <input value={xPosition} onChange={onXPositionChangeHandler}></input>
+            <div className={styles.form_item}>
+                <label className={styles.form_control_left}>Position X:</label>
+                <input className={styles.form_control_right} value={xPosition} onChange={onXPositionChangeHandler}></input>
             </div>
-            <div>
-                <label>Position Y:</label>
-                <input value={yPosition} onChange={onYPositionChangeHandler}></input>
+            <div className={styles.form_item}>
+                <label className={styles.form_control_left}>Position Y:</label>
+                <input className={styles.form_control_right} value={yPosition} onChange={onYPositionChangeHandler}></input>
             </div>
-            <div>
-                <label>Position Z:</label>
-                <input style={{width: 80}} value={zPosition} onChange={onZPositionChangeHandler}></input>
+            <div className={styles.form_item}>
+                <label className={styles.form_control_left}>Position Z:</label>
+                <input className={styles.form_control_right} value={zPosition} onChange={onZPositionChangeHandler}></input>
             </div>
-            <button style={{width: 80, height: 20}} onClick={onClickHandler}>Move</button>
+            <button className={styles.form_button} onClick={onClickHandler}>Move</button>
         </form>
     );
 };

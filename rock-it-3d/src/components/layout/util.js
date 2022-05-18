@@ -68,12 +68,12 @@ const ObjMeshLoadWrapper = ({meshFilename, textureFilename, position, rotation, 
         materials.preload();
         loader.setMaterials(materials)
     });
-  return (
-    <mesh scale={scale} position={position} rotation={rotation}>
-        <primitive object={obj} />
-        <meshPhysicalMaterial 
-            color={"red"}/>
-    </mesh>
+    return (
+        <mesh scale={scale} position={position} rotation={rotation}>
+            <primitive object={obj} />
+            <meshPhysicalMaterial 
+                color={"red"}/>
+        </mesh>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './layout.module.css';
 
 const FunctionalButtonGroup = (props) => {
     const onClickCam1Handler = (event) => {
@@ -12,10 +13,10 @@ const FunctionalButtonGroup = (props) => {
     };
 
     return (
-        <div>
-            <button onClick={onClickCam1Handler}>Update Camera 1 Viewport</button>
-            <button onClick={onClickCam2Handler}>Update Camera 2 Viewport</button>
-        </div>
+        <>
+            <button className={styles.event_button} onClick={onClickCam1Handler}>Update Camera 1 Viewport</button>
+            <button className={styles.event_button} onClick={onClickCam2Handler}>Update Camera 2 Viewport</button>
+        </>
     )
 };
 

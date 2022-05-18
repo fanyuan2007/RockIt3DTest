@@ -6,7 +6,7 @@ const KittyClimbing = ({position}) => {
     
     return (
         <>
-            <Kitty position={position} rotation={[0, -Math.PI, 0]}/>
+            <Kitty position={position}/>
             <IllusionStairs groupPosition={[-10, 0, -10]}/>
         </>
     );

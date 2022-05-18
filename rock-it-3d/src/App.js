@@ -94,7 +94,7 @@ function App() {
           <CameraUpdate cameraPos={camPos} lookAtPos={mesh1Pos}/>
           {/*<PerspectiveCamera manual onUpdate={onPerspectiveCameraUpdateHandler} />*/}
           {/* illusion 2:
-          camera.position Vector3 {x: 16.80139210958912, y: 13.76807931426504, z: 26.619405072875377}
+          camera.position Vector3 {x: 16.80139210958912, y: 13.76807931426504, z:   26.619405072875377}
 avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.9} penumbra={1} />

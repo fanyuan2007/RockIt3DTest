@@ -38,14 +38,16 @@ const Illusion1 = () => {
 
     let rotation = [0, 0, 0];
     let color = "red";
+
+    const globalOffset = [30, 0, 20];
   
     let xOffset = 0.9;
     let yOffset = 1;
     let zOffset = 0.9;
-    let position = [0, 0, 0];
-    let position2 = [xOffset*1, yOffset*1, zOffset*1];
-    let position3 = [xOffset*2, yOffset*2, zOffset*2];
-    let position4 = [xOffset*3, yOffset*3, zOffset*3];
+    let position = [globalOffset[0], 0, globalOffset[2]];
+    let position2 = [globalOffset[0] + xOffset*1, yOffset*1, globalOffset[2] + zOffset*1];
+    let position3 = [globalOffset[0] + xOffset*2, yOffset*2, globalOffset[2] + zOffset*2];
+    let position4 = [globalOffset[0] + xOffset*3, yOffset*3, globalOffset[2] + zOffset*3];
     let position9 = [0, 1, 0];
     let position8 = [0, 2, 0];
     let position7 = [0, 4, 0];
@@ -92,8 +94,6 @@ const Illusion1 = () => {
         rotationArg={rotation}
         colorArg={color}/>
         
-        
-    
     </>
     );
 

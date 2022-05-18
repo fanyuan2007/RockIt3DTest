@@ -42,14 +42,17 @@ const SWWorld = () => {
 
     let rotation = [0, 0, 0];
     let color = "pink";
-  
+
+    let globalOffsetX = 40;
+    let globalOffsetZ = 20;
+
     let xOffset = 0.9;
     let yOffset = 1;
     let zOffset = 0.9;
-    let position = [0, 0, 0];
-    let position2 = [xOffset*1, yOffset*1, zOffset*1];
-    let position3 = [xOffset*2, yOffset*2, zOffset*2];
-    let position4 = [xOffset*3, yOffset*3, zOffset*3];
+    let position = [40, 10, 20];
+    let position2 = [globalOffsetX + xOffset*1, yOffset*1, globalOffsetZ + zOffset*1];
+    let position3 = [globalOffsetX + xOffset*2, yOffset*2, globalOffsetZ + zOffset*2];
+    let position4 = [globalOffsetX + xOffset*3, yOffset*3, globalOffsetZ + zOffset*3];
     let position9 = [0, 1, 0];
     let position8 = [0, 2, 0];
     let position7 = [0, 4, 0];

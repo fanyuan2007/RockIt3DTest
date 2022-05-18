@@ -13,15 +13,6 @@ import Brick2x6 from "../../assets/stl/4181142_-_2456_-_44237_white_brick_2_x_6.
 
 import React from 'react';
 
-import { useEffect, useRef } from "react";
-
-import { useThree } from '@react-three/fiber'
-
-import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
-
-import {Canvas, useLoader} from "react-three-fiber";
-
-//import book from './book.stl'
 import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 
@@ -47,9 +38,9 @@ const SEWorld = () => {
 
     let colors = ["red", "green", "blue", "pink", "purple"];
 
-    let offsetx = 20;
+    let offsetx = 10;
     let offsety = 0;
-    let offsetz = 0;
+    let offsetz = 20;
     let position1 = [offsetx+0,offsety+ 0,offsetz+ 0];
     let position2 = [offsetx+0,offsety+ 0,offsetz+ depth];
     let position3 = [offsetx+0,offsety+ 0,offsetz+ depth*2];

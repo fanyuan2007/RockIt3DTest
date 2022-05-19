@@ -26,6 +26,7 @@ import {LoadObjectFromFile, LoadObjectFromFile2} from './util';
 
 const Illusion1 = () => {
     const {camera} = useThree();
+  
     let objectFileName = Brick2x4;
     let objectFileName2 = Brick2x4;
     let objectFileName3 = Brick2x4;
@@ -55,10 +56,10 @@ const Illusion1 = () => {
     let position5 = [0, 6, 0];
     
     useFrame(() => {
+        // console.log('camera', camera);
+        // console.log('camera.position', camera.position);
+        // console.log('camera.rotation', camera.rotation);
         
-        console.log('camera', camera);
-        console.log('camera.position', camera.position);
-        console.log('camera.rotation', camera.rotation);
     });
     
     return (

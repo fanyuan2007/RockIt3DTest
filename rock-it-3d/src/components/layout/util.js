@@ -31,21 +31,18 @@ const LoadObjectFromFile = ({objectFileNameArg, positionArg, scaleArg, rotationA
     
      useEffect(() => {
         //console.log('ref.current.position', ref.current.position);
-        const vec1 = new Vector3(0, 1000, 10000);
-        //console.log('camera before', { camera });
-        //console.log('camera position before', camera.position);
-
-        
+        //const vec1 = new Vector3(0, 1000, 10000);
+        // console.log('camera before', { camera });
+        // console.log('camera position before', camera.position);
         // camera.lookAt(ref.current.position);
         // camera.lookAt(vec1);
 
         //camera.translateX(50);
 
-
         // camera.rotateY(60);
         //camera.updateProjectionMatrix();
 
-        //console.log('camera position after', { camera }.camera.position);
+        // console.log('camera position after', { camera }.camera.position);
     }); 
 
     return (

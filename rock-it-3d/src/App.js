@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Canvas, useFrame, useThree} from 'react-three-fiber';
 import {OrbitControls, PerspectiveCamera} from '@react-three/drei';
 import * as THREE from 'three';
@@ -15,25 +15,17 @@ import Banner from './components/layout/banner';
 import FunctionalButtonGroup from './components/layout/functionalButtonGroup';
 import styles from './components/layout/layout.module.css';
 
-var isUpdate = false;
 
-const CameraUpdate = ({cameraPos, lookAtPos}) => {
-  useFrame((state) => {
-    if (isUpdate)
-    {
-      state.camera.position.x = cameraPos[0];
-      state.camera.position.y = cameraPos[1];
-      state.camera.position.z = cameraPos[2];
-      state.camera.lookAt(lookAtPos[0], lookAtPos[1], lookAtPos[2]);
-      //console.log("current camera: ", state.camera);
-      //console.log("current camera lookAt: ", lookAtPos);
-      state.camera.updateProjectionMatrix();
-      isUpdate = false;
-    }
-    //console.log("camera other: ", state.camera);
-    // state.camera.lookAt(lookAtPos[0], lookAtPos[1], lookAtPos[2]);
-  })
 
+const CameraUpdate = ({cameraPos}) => {
+  const {camera} = useThree();
+
+  // console.log('camera.position.x, y, z before:', camera.position.x, camera.position.y, camera.position.z);
+
+  camera.position.x = cameraPos[0];
+  camera.position.y = cameraPos[1];
+  camera.position.z = cameraPos[2];
+  
   return null;
 };
 
@@ -63,17 +55,32 @@ function App() {
     }
   };
 
+  const ref = useRef();
+  const controls = useRef();
+  
   const onCameraPositionUpdateHandler = (camUpdateInfo) => {
+
+    // console.log('controls.current.target.x, y, z before', controls.current.target.x, controls.current.target.y, controls.current.target.z);
+
+    // We need to update the target of orbitControls (controls.current.target)
+    // It dictates where the camera looks to.
     if (camUpdateInfo.camId == 0)
     {
-      setCamPos([16.8, 13.8, 26.6]);
-      
+      // Look at obj illusion2
+      setCamPos([9.81, 10.22, 39.39]);
+      controls.current.target.x = 11.45 ;
+      controls.current.target.y = -4.08;
+      controls.current.target.z = 26.35;
     }
     else
     {
-      setCamPos([-6.25, 11.73, -4.58]);
+      // Look at obj illusion1
+      setCamPos([23.40, 10.72, 15.30]);
+      controls.current.target.x = 33.44;
+      controls.current.target.y = -4.30;
+      controls.current.target.z = 22.41;
     }
-    isUpdate = true;
+    controls.current.update();
   };
 
   return (
@@ -90,12 +97,8 @@ function App() {
         </div>
       </div>
       <Canvas style={{position: "absolute"}} camera={{ position: [0, 0, 30]}}>
-          <OrbitControls enableDamping={false}/>
-          <CameraUpdate cameraPos={camPos} lookAtPos={mesh1Pos}/>
-          {/*<PerspectiveCamera manual onUpdate={onPerspectiveCameraUpdateHandler} />*/}
-          {/* illusion 2:
-          camera.position Vector3 {x: 16.80139210958912, y: 13.76807931426504, z:   26.619405072875377}
-avner.js:59 camera.rotation Euler {_x: -0.6399842456636935, _y: -0.26125929633748424, _z: -0.18998795607798563, _order: 'XYZ', _onChangeCallback: ƒ} */}
+          <OrbitControls ref={controls} enableDamping={false}/>
+          <CameraUpdate cameraPos={camPos}/>
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.9} penumbra={1} />
           <directionalLight color={"0xffffff"} intensity={0.5} />
